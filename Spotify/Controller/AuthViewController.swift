@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 
 class AuthViewController: UIViewController, WKNavigationDelegate {
-
+    
     private let webView: WKWebView = {
         let prefs = WKWebpagePreferences()
         prefs.allowsContentJavaScript = true
@@ -50,11 +50,14 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
         webView.isHidden = true
         print("code \(code)")
         AuthManager.shared.exchangeCodeForToken(code: code) { [weak self] success in
-            self?.navigationController?.popViewController(animated: true)
-            self?.completionHandler?(success)
+            DispatchQueue.main.async {
+                self?.navigationController?.popViewController(animated: true)
+                self?.completionHandler?(success)
+            }
+            
         }
     }
-
     
-
+    
+    
 }
