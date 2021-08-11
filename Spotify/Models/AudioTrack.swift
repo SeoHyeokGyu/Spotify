@@ -10,7 +10,7 @@ import Foundation
 struct AudioTrack: Codable {
     let album: Album
     let artists: [Artist]
-    let available_marckets: [String]
+    let available_markets: [String]
     let disc_number: Int
     let duration_ms: Int
     let explicit: Bool
