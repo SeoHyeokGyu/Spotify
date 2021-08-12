@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		46459E3E26C11A6C00E4CCB0 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46459E3D26C11A6C00E4CCB0 /* SettingsModels.swift */; };
+		46477DC226C4EDEF00EFD0F6 /* FeaturedPlaylistsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46477DC126C4EDEF00EFD0F6 /* FeaturedPlaylistsCellViewModel.swift */; };
+		46477DC426C4EE9200EFD0F6 /* RecommendedTrackCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46477DC326C4EE9200EFD0F6 /* RecommendedTrackCellViewModel.swift */; };
 		46481A7926BD0EA100560AEB /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46481A7826BD0EA100560AEB /* AuthResponse.swift */; };
 		4653716F26C2479B0093BE38 /* NewReleasesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4653716E26C2479B0093BE38 /* NewReleasesResponse.swift */; };
 		4653717126C248E90093BE38 /* APIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4653717026C248E90093BE38 /* APIImage.swift */; };
@@ -48,6 +50,8 @@
 		0DAB98CAF94BB8F6A1099F4E /* Pods-Spotify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify.release.xcconfig"; path = "Target Support Files/Pods-Spotify/Pods-Spotify.release.xcconfig"; sourceTree = "<group>"; };
 		21555E2FF96F3DE5134EDB6C /* Pods_Spotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46459E3D26C11A6C00E4CCB0 /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
+		46477DC126C4EDEF00EFD0F6 /* FeaturedPlaylistsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPlaylistsCellViewModel.swift; sourceTree = "<group>"; };
+		46477DC326C4EE9200EFD0F6 /* RecommendedTrackCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTrackCellViewModel.swift; sourceTree = "<group>"; };
 		46481A7826BD0EA100560AEB /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		4653716E26C2479B0093BE38 /* NewReleasesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesResponse.swift; sourceTree = "<group>"; };
 		4653717026C248E90093BE38 /* APIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIImage.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				465430A526C3A507009470DB /* NewReleasesCellViewModel.swift */,
+				46477DC126C4EDEF00EFD0F6 /* FeaturedPlaylistsCellViewModel.swift */,
+				46477DC326C4EE9200EFD0F6 /* RecommendedTrackCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				4666B5C626B92DC400FDE0EE /* Playlist.swift in Sources */,
 				4666B5B426B92CDE00FDE0EE /* WelcomeViewController.swift in Sources */,
 				465430A626C3A507009470DB /* NewReleasesCellViewModel.swift in Sources */,
+				46477DC426C4EE9200EFD0F6 /* RecommendedTrackCellViewModel.swift in Sources */,
 				4666B5B826B92D1200FDE0EE /* ProfileViewController.swift in Sources */,
 				4666B5A926B92B4100FDE0EE /* TabBarViewController.swift in Sources */,
 				4666B59326B9296D00FDE0EE /* HomeViewController.swift in Sources */,
@@ -379,6 +386,7 @@
 				4653717C26C28AAA0093BE38 /* NewReleaseCollectionViewCell.swift in Sources */,
 				4666B5C826B92DD800FDE0EE /* AudioTrack.swift in Sources */,
 				4653717E26C28ADC0093BE38 /* FeaturedPlaylistCollectionViewCell.swift in Sources */,
+				46477DC226C4EDEF00EFD0F6 /* FeaturedPlaylistsCellViewModel.swift in Sources */,
 				4666B58F26B9296D00FDE0EE /* AppDelegate.swift in Sources */,
 				4666B5AD26B92B9700FDE0EE /* LibraryViewController.swift in Sources */,
 				4666B5BC26B92D3300FDE0EE /* PlaylistViewController.swift in Sources */,
