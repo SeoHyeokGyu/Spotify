@@ -11,6 +11,8 @@
 		46477DC226C4EDEF00EFD0F6 /* FeaturedPlaylistsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46477DC126C4EDEF00EFD0F6 /* FeaturedPlaylistsCellViewModel.swift */; };
 		46477DC426C4EE9200EFD0F6 /* RecommendedTrackCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46477DC326C4EE9200EFD0F6 /* RecommendedTrackCellViewModel.swift */; };
 		46481A7926BD0EA100560AEB /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46481A7826BD0EA100560AEB /* AuthResponse.swift */; };
+		4650DCF326C69BB0002D8046 /* PlaylistHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4650DCF226C69BB0002D8046 /* PlaylistHeaderCollectionReusableView.swift */; };
+		4650DCF526C69F20002D8046 /* PlaylistHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4650DCF426C69F20002D8046 /* PlaylistHeaderViewModel.swift */; };
 		4653716F26C2479B0093BE38 /* NewReleasesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4653716E26C2479B0093BE38 /* NewReleasesResponse.swift */; };
 		4653717126C248E90093BE38 /* APIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4653717026C248E90093BE38 /* APIImage.swift */; };
 		4653717326C24DCA0093BE38 /* FeaturePlaylistsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4653717226C24DCA0093BE38 /* FeaturePlaylistsResponse.swift */; };
@@ -56,6 +58,8 @@
 		46477DC126C4EDEF00EFD0F6 /* FeaturedPlaylistsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPlaylistsCellViewModel.swift; sourceTree = "<group>"; };
 		46477DC326C4EE9200EFD0F6 /* RecommendedTrackCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTrackCellViewModel.swift; sourceTree = "<group>"; };
 		46481A7826BD0EA100560AEB /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		4650DCF226C69BB0002D8046 /* PlaylistHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		4650DCF426C69F20002D8046 /* PlaylistHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHeaderViewModel.swift; sourceTree = "<group>"; };
 		4653716E26C2479B0093BE38 /* NewReleasesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesResponse.swift; sourceTree = "<group>"; };
 		4653717026C248E90093BE38 /* APIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIImage.swift; sourceTree = "<group>"; };
 		4653717226C24DCA0093BE38 /* FeaturePlaylistsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturePlaylistsResponse.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 			children = (
 				4653717826C289880093BE38 /* Browse */,
 				4666B59926B9296F00FDE0EE /* LaunchScreen.storyboard */,
+				4650DCF226C69BB0002D8046 /* PlaylistHeaderCollectionReusableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 				465430A526C3A507009470DB /* NewReleasesCellViewModel.swift */,
 				46477DC126C4EDEF00EFD0F6 /* FeaturedPlaylistsCellViewModel.swift */,
 				46477DC326C4EE9200EFD0F6 /* RecommendedTrackCellViewModel.swift */,
+				4650DCF426C69F20002D8046 /* PlaylistHeaderViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -401,9 +407,11 @@
 				4666B58F26B9296D00FDE0EE /* AppDelegate.swift in Sources */,
 				4666B5AD26B92B9700FDE0EE /* LibraryViewController.swift in Sources */,
 				4666B5BC26B92D3300FDE0EE /* PlaylistViewController.swift in Sources */,
+				4650DCF326C69BB0002D8046 /* PlaylistHeaderCollectionReusableView.swift in Sources */,
 				4666B59126B9296D00FDE0EE /* SceneDelegate.swift in Sources */,
 				4666B5CA26B92DE800FDE0EE /* Artist.swift in Sources */,
 				4666B5BA26B92D2400FDE0EE /* PlayerViewController.swift in Sources */,
+				4650DCF526C69F20002D8046 /* PlaylistHeaderViewModel.swift in Sources */,
 				4666B5C026B92D6200FDE0EE /* AuthManager.swift in Sources */,
 				4666B5BE26B92D4500FDE0EE /* SearchResultsViewController.swift in Sources */,
 				4666B5CC26B92DFD00FDE0EE /* UseProfile.swift in Sources */,
