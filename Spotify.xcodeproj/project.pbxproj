@@ -48,6 +48,7 @@
 		4666B5CA26B92DE800FDE0EE /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666B5C926B92DE800FDE0EE /* Artist.swift */; };
 		4666B5CC26B92DFD00FDE0EE /* UseProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666B5CB26B92DFD00FDE0EE /* UseProfile.swift */; };
 		4666B5CE26B93C7100FDE0EE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666B5CD26B93C7100FDE0EE /* Extensions.swift */; };
+		466E2C0F26CA2D4000A0DCC2 /* TitleHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466E2C0E26CA2D4000A0DCC2 /* TitleHeaderCollectionReusableView.swift */; };
 		A8D7F66DCE2081648D625CF8 /* Pods_Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21555E2FF96F3DE5134EDB6C /* Pods_Spotify.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		4666B5C926B92DE800FDE0EE /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		4666B5CB26B92DFD00FDE0EE /* UseProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseProfile.swift; sourceTree = "<group>"; };
 		4666B5CD26B93C7100FDE0EE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		466E2C0E26CA2D4000A0DCC2 /* TitleHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		D16E54F324666B1536BCE31F /* Pods-Spotify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify.debug.xcconfig"; path = "Target Support Files/Pods-Spotify/Pods-Spotify.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +179,7 @@
 				4653717826C289880093BE38 /* Browse */,
 				4666B59926B9296F00FDE0EE /* LaunchScreen.storyboard */,
 				4650DCF226C69BB0002D8046 /* PlaylistHeaderCollectionReusableView.swift */,
+				466E2C0E26CA2D4000A0DCC2 /* TitleHeaderCollectionReusableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				465430A626C3A507009470DB /* NewReleasesCellViewModel.swift in Sources */,
 				46477DC426C4EE9200EFD0F6 /* RecommendedTrackCellViewModel.swift in Sources */,
 				4666B5B826B92D1200FDE0EE /* ProfileViewController.swift in Sources */,
+				466E2C0F26CA2D4000A0DCC2 /* TitleHeaderCollectionReusableView.swift in Sources */,
 				46609E6326C654D7008B92A7 /* AlbumViewController.swift in Sources */,
 				4666B5A926B92B4100FDE0EE /* TabBarViewController.swift in Sources */,
 				4666B59326B9296D00FDE0EE /* HomeViewController.swift in Sources */,
