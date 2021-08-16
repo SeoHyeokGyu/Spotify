@@ -49,6 +49,8 @@
 		4666B5CC26B92DFD00FDE0EE /* UseProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666B5CB26B92DFD00FDE0EE /* UseProfile.swift */; };
 		4666B5CE26B93C7100FDE0EE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666B5CD26B93C7100FDE0EE /* Extensions.swift */; };
 		466E2C0F26CA2D4000A0DCC2 /* TitleHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466E2C0E26CA2D4000A0DCC2 /* TitleHeaderCollectionReusableView.swift */; };
+		466E2C1126CA45C100A0DCC2 /* AlbumTrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466E2C1026CA45C100A0DCC2 /* AlbumTrackCollectionViewCell.swift */; };
+		466E2C1326CA48EA00A0DCC2 /* AlbumCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466E2C1226CA48EA00A0DCC2 /* AlbumCollectionViewCellViewModel.swift */; };
 		A8D7F66DCE2081648D625CF8 /* Pods_Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21555E2FF96F3DE5134EDB6C /* Pods_Spotify.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,8 @@
 		4666B5CB26B92DFD00FDE0EE /* UseProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseProfile.swift; sourceTree = "<group>"; };
 		4666B5CD26B93C7100FDE0EE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		466E2C0E26CA2D4000A0DCC2 /* TitleHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		466E2C1026CA45C100A0DCC2 /* AlbumTrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTrackCollectionViewCell.swift; sourceTree = "<group>"; };
+		466E2C1226CA48EA00A0DCC2 /* AlbumCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		D16E54F324666B1536BCE31F /* Pods-Spotify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify.debug.xcconfig"; path = "Target Support Files/Pods-Spotify/Pods-Spotify.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +132,7 @@
 				4653717B26C28AAA0093BE38 /* NewReleaseCollectionViewCell.swift */,
 				4653717D26C28ADC0093BE38 /* FeaturedPlaylistCollectionViewCell.swift */,
 				4653717F26C28AF90093BE38 /* RecommendedTrackCollectionViewCell.swift */,
+				466E2C1026CA45C100A0DCC2 /* AlbumTrackCollectionViewCell.swift */,
 			);
 			path = Browse;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				46477DC126C4EDEF00EFD0F6 /* FeaturedPlaylistsCellViewModel.swift */,
 				46477DC326C4EE9200EFD0F6 /* RecommendedTrackCellViewModel.swift */,
 				4650DCF426C69F20002D8046 /* PlaylistHeaderViewModel.swift */,
+				466E2C1226CA48EA00A0DCC2 /* AlbumCollectionViewCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 				4666B5C626B92DC400FDE0EE /* Playlist.swift in Sources */,
 				4666B5B426B92CDE00FDE0EE /* WelcomeViewController.swift in Sources */,
 				465430A626C3A507009470DB /* NewReleasesCellViewModel.swift in Sources */,
+				466E2C1326CA48EA00A0DCC2 /* AlbumCollectionViewCellViewModel.swift in Sources */,
 				46477DC426C4EE9200EFD0F6 /* RecommendedTrackCellViewModel.swift in Sources */,
 				4666B5B826B92D1200FDE0EE /* ProfileViewController.swift in Sources */,
 				466E2C0F26CA2D4000A0DCC2 /* TitleHeaderCollectionReusableView.swift in Sources */,
@@ -403,6 +410,7 @@
 				4653716F26C2479B0093BE38 /* NewReleasesResponse.swift in Sources */,
 				4653717126C248E90093BE38 /* APIImage.swift in Sources */,
 				4653717326C24DCA0093BE38 /* FeaturePlaylistsResponse.swift in Sources */,
+				466E2C1126CA45C100A0DCC2 /* AlbumTrackCollectionViewCell.swift in Sources */,
 				46481A7926BD0EA100560AEB /* AuthResponse.swift in Sources */,
 				4653717C26C28AAA0093BE38 /* NewReleaseCollectionViewCell.swift in Sources */,
 				4666B5C826B92DD800FDE0EE /* AudioTrack.swift in Sources */,
