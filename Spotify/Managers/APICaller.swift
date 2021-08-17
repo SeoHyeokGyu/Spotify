@@ -42,7 +42,7 @@ final class APICaller{
     }
     
     // MARK: - PLAYLISTS
-
+    
     public func getPlaylistDetails(for playlist: Playlist, completion: @escaping (Result<PlaylistDetailsResponse, Error>) -> Void) {
         createRequest( with: URL(string: Constants.baseAPIURL + "/playlists/" + playlist.id),
                        type: .GET
@@ -65,6 +65,7 @@ final class APICaller{
     }
     
     // MARK: - PROFILE
+    
     public func getCurrentUserProfile(completion: @escaping (Result<UserProfile, Error>) -> Void){
         createRequest(with: URL(string: Constants.baseAPIURL + "/me"), type: .GET){
             baseRequest in
@@ -88,8 +89,59 @@ final class APICaller{
         }
         
     }
+    // MARK: - CATEGORY
+    
+    public func getCategories(completion: @escaping (Result<[Category], Error>) -> Void) {
+        createRequest(
+            with: URL(string: Constants.baseAPIURL + "/browse/categories?limit=50"),
+            type: .GET
+        ) { request in
+            let task = URLSession.shared.dataTask(with: request) { data, _, error in
+                guard let data = data, error == nil else {
+                    completion(.failure(APIError.failedToGetData))
+                    return
+                }
+                do {
+                    let result = try JSONDecoder().decode(AllCategoriesResponse.self, from: data)
+                    completion(.success(result.categories.items))
+                }catch{
+                    print(error.localizedDescription)
+                    completion(.failure(error))
+                }
+                
+            }
+            task.resume()
+        }
+    }
+    
+    // MARK: - CATEGORY PLAYLIST
+    
+    public func getCategoryPlaylist(category: Category, completion: @escaping (Result<[Playlist], Error>) -> Void) {
+        createRequest(
+            with: URL(string: Constants.baseAPIURL + "/browse/categories/\(category.id)/playlists?limit=50"),
+            type: .GET
+        ) { request in
+            let task = URLSession.shared.dataTask(with: request) { data, _, error in
+                guard let data = data, error == nil else {
+                    completion(.failure(APIError.failedToGetData))
+                    return
+                }
+                do {
+                    let result = try JSONDecoder().decode(CategoryPlaylistsResponse.self, from: data)
+                    let playlists = result.playlists.items
+                    completion(.success(playlists))
+                }catch{
+                    print(error.localizedDescription)
+                    completion(.failure(error))
+                }
+                
+            }
+            task.resume()
+        }
+    }
     
     // MARK: - BROWSE
+    
     public func getNewReleases(completion: @escaping ((Result<NewReleasesResponse, Error>)) -> Void){
         createRequest(with: URL(string: Constants.baseAPIURL + "/browse/new-releases?limit=11"), type: .GET) { request in
             let task = URLSession.shared.dataTask(with: request) {data, _, error in
@@ -110,7 +162,7 @@ final class APICaller{
         }
     }
     
-    public func getFeaturePlaylists(completion: @escaping ((Result<FeaturePlaylistResponse, Error>) -> Void)){
+    public func getFeaturePlaylists(completion: @escaping ((Result<FeaturedPlaylistsResponse, Error>) -> Void)){
         createRequest(with: URL(string: Constants.baseAPIURL + "/browse/featured-playlists?limit=20"), type: .GET) { request in
             let task = URLSession.shared.dataTask(with: request) {data, _, error in
                 guard let data = data, error == nil else {
@@ -118,12 +170,12 @@ final class APICaller{
                     return
                 }
                 do {
-                    let result = try JSONDecoder().decode(FeaturePlaylistResponse.self, from: data)
+                    let result = try JSONDecoder().decode(FeaturedPlaylistsResponse.self, from: data)
                     completion(.success(result))
-
+                    
                 } catch {
                     completion(.failure(error))
-
+                    
                 }
                 
             }
@@ -163,7 +215,7 @@ final class APICaller{
                 do {
                     let result = try JSONDecoder().decode(RecommendedGenresResponse.self, from: data)
                     completion(.success(result))
-
+                    
                 } catch {
                     completion(.failure(error))
                 }

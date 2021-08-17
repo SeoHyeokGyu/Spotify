@@ -1,5 +1,5 @@
 //
-//  FeaturePlaylistsResponse.swift
+//  FeaturedPlaylistsResponse.swift
 //  Spotify
 //
 //  Created by 서혁규 on 2021/08/10.
@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct FeaturePlaylistResponse: Codable{
+struct FeaturedPlaylistsResponse: Codable{
+    let playlists: PlaylistResponse
+}
+
+struct CategoryPlaylistsResponse: Codable{
     let playlists: PlaylistResponse
 }
 

@@ -226,7 +226,7 @@ class HomeViewController: UIViewController {
         print("fetch")
 
         var newReleases: NewReleasesResponse?
-        var featurePlaylist: FeaturePlaylistResponse?
+        var featurePlaylist: FeaturedPlaylistsResponse?
         var recommendations: RecommendationsResponse?
         
         
