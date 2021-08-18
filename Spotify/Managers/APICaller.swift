@@ -140,10 +140,45 @@ final class APICaller{
         }
     }
     
+    // MARK: - SEARCH
+    
+    public func search(with query: String, completion: @escaping ((Result<[SearchResult], Error>)) -> Void){
+        createRequest(with: URL(string: Constants.baseAPIURL + "/search?limit=10&type=album,artist,playlist,track&q=\(query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")"),
+                      type: .GET
+        ) { request in
+            let task = URLSession.shared.dataTask(with: request) {data, _, error in
+                guard let data = data, error == nil else {
+                    completion(.failure(APIError.failedToGetData))
+                    return
+                }
+                do {
+                    let result = try JSONDecoder().decode(SearchResultsResponse.self, from: data)
+                    var searchResult: [SearchResult] = []
+                    
+                    searchResult.append(contentsOf: result.tracks.items.compactMap({.track(model: $0)}))
+                    searchResult.append(contentsOf: result.albums.items.compactMap({.album(model: $0)}))
+                    searchResult.append(contentsOf: result.artists.items.compactMap({.artist(model: $0)}))
+                    searchResult.append(contentsOf: result.playlists.items.compactMap({.playlist(model: $0)}))
+                    
+                    completion(.success(searchResult))
+                    
+                } catch {
+                    completion(.failure(error))
+                }
+                
+            }
+            task.resume()
+            
+        }
+    }
+    
+    
     // MARK: - BROWSE
     
     public func getNewReleases(completion: @escaping ((Result<NewReleasesResponse, Error>)) -> Void){
-        createRequest(with: URL(string: Constants.baseAPIURL + "/browse/new-releases?limit=11"), type: .GET) { request in
+        createRequest(with: URL(string: Constants.baseAPIURL + "/browse/new-releases?limit=11"),
+                      type: .GET
+        ) { request in
             let task = URLSession.shared.dataTask(with: request) {data, _, error in
                 guard let data = data, error == nil else {
                     completion(.failure(APIError.failedToGetData))
@@ -226,7 +261,7 @@ final class APICaller{
         }
     }
     
-    
+    // MARK: - PRIVATE
     enum HTTPHethod: String {
         case GET
         case POST
