@@ -52,6 +52,8 @@
 		4666B5CA26B92DE800FDE0EE /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666B5C926B92DE800FDE0EE /* Artist.swift */; };
 		4666B5CC26B92DFD00FDE0EE /* UseProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666B5CB26B92DFD00FDE0EE /* UseProfile.swift */; };
 		4666B5CE26B93C7100FDE0EE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666B5CD26B93C7100FDE0EE /* Extensions.swift */; };
+		4669516526CF6402001A6CE5 /* PlaybackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669516426CF6402001A6CE5 /* PlaybackPresenter.swift */; };
+		4669516726CF7CA0001A6CE5 /* PlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669516626CF7CA0001A6CE5 /* PlayerControlsView.swift */; };
 		4669CE4626CB85F90097D4E8 /* AllCategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669CE4526CB85F90097D4E8 /* AllCategoriesResponse.swift */; };
 		4669CE4826CB93610097D4E8 /* CategoryCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669CE4726CB93610097D4E8 /* CategoryCollectionViewCellViewModel.swift */; };
 		4669CE4A26CB97D70097D4E8 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669CE4926CB97D70097D4E8 /* CategoryViewController.swift */; };
@@ -114,6 +116,8 @@
 		4666B5C926B92DE800FDE0EE /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		4666B5CB26B92DFD00FDE0EE /* UseProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseProfile.swift; sourceTree = "<group>"; };
 		4666B5CD26B93C7100FDE0EE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4669516426CF6402001A6CE5 /* PlaybackPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackPresenter.swift; sourceTree = "<group>"; };
+		4669516626CF7CA0001A6CE5 /* PlayerControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlsView.swift; sourceTree = "<group>"; };
 		4669CE4526CB85F90097D4E8 /* AllCategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCategoriesResponse.swift; sourceTree = "<group>"; };
 		4669CE4726CB93610097D4E8 /* CategoryCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		4669CE4926CB97D70097D4E8 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		4666B58D26B9296D00FDE0EE /* Spotify */ = {
 			isa = PBXGroup;
 			children = (
+				4669516326CF63DE001A6CE5 /* Presenter */,
 				4666B5A726B929BB00FDE0EE /* Resources */,
 				4666B5A626B929B300FDE0EE /* Managers */,
 				4666B5A526B929A100FDE0EE /* ViewModels */,
@@ -216,6 +221,7 @@
 				4650DCF226C69BB0002D8046 /* PlaylistHeaderCollectionReusableView.swift */,
 				466E2C0E26CA2D4000A0DCC2 /* TitleHeaderCollectionReusableView.swift */,
 				466E2C1426CA58EF00A0DCC2 /* CategoryCollectionViewCell.swift */,
+				4669516626CF7CA0001A6CE5 /* PlayerControlsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +310,14 @@
 				4669CE4926CB97D70097D4E8 /* CategoryViewController.swift */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		4669516326CF63DE001A6CE5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4669516426CF6402001A6CE5 /* PlaybackPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		6F4723C837ED19B3512279BC /* Pods */ = {
@@ -451,6 +465,7 @@
 				4666B5B226B92CD100FDE0EE /* AuthViewController.swift in Sources */,
 				4666B5C426B92DA200FDE0EE /* HapticsManager.swift in Sources */,
 				4653716F26C2479B0093BE38 /* NewReleasesResponse.swift in Sources */,
+				4669516726CF7CA0001A6CE5 /* PlayerControlsView.swift in Sources */,
 				466E2C1526CA58EF00A0DCC2 /* CategoryCollectionViewCell.swift in Sources */,
 				4653717126C248E90093BE38 /* APIImage.swift in Sources */,
 				46243E0326CE3495001CBDD5 /* SearchResultSubtitleTableViewCell.swift in Sources */,
@@ -468,6 +483,7 @@
 				4650DCF326C69BB0002D8046 /* PlaylistHeaderCollectionReusableView.swift in Sources */,
 				466C918D26CCDF6900A700D6 /* SearchResult.swift in Sources */,
 				4666B59126B9296D00FDE0EE /* SceneDelegate.swift in Sources */,
+				4669516526CF6402001A6CE5 /* PlaybackPresenter.swift in Sources */,
 				4666B5CA26B92DE800FDE0EE /* Artist.swift in Sources */,
 				4666B5BA26B92D2400FDE0EE /* PlayerViewController.swift in Sources */,
 				4650DCF526C69F20002D8046 /* PlaylistHeaderViewModel.swift in Sources */,
