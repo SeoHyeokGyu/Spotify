@@ -404,19 +404,17 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             vc.title = playlist.name
             vc.navigationItem.largeTitleDisplayMode = .never
             navigationController?.pushViewController(vc, animated: true)
-            break
         case .newReleases:
             let album = newAlbums[indexPath.row]
             let vc = AlbumViewController(album: album)
             vc.title = album.name
             vc.navigationItem.largeTitleDisplayMode = .never
             navigationController?.pushViewController(vc, animated: true)
-            break
             let track = tracks[indexPath.row]
-            PlaybackPresenter.startPlayback(from: self, track: track)
+            PlaybackPresenter.shared.startPlayback(from: self, track: track)
         case .recommendedTracks:
-            break
-
+            let track = tracks[indexPath.row]
+            PlaybackPresenter.shared.startPlayback(from: self, track: track)
         }
     }
 }
