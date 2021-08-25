@@ -66,6 +66,8 @@
 		466E2C1126CA45C100A0DCC2 /* AlbumTrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466E2C1026CA45C100A0DCC2 /* AlbumTrackCollectionViewCell.swift */; };
 		466E2C1326CA48EA00A0DCC2 /* AlbumCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466E2C1226CA48EA00A0DCC2 /* AlbumCollectionViewCellViewModel.swift */; };
 		466E2C1526CA58EF00A0DCC2 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466E2C1426CA58EF00A0DCC2 /* CategoryCollectionViewCell.swift */; };
+		466FAEF526D61D770030B6B5 /* LibararyPlaylistsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466FAEF426D61D770030B6B5 /* LibararyPlaylistsResponse.swift */; };
+		466FAEF726D6210A0030B6B5 /* ActionLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466FAEF626D6210A0030B6B5 /* ActionLabelView.swift */; };
 		A8D7F66DCE2081648D625CF8 /* Pods_Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21555E2FF96F3DE5134EDB6C /* Pods_Spotify.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +135,8 @@
 		466E2C1026CA45C100A0DCC2 /* AlbumTrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTrackCollectionViewCell.swift; sourceTree = "<group>"; };
 		466E2C1226CA48EA00A0DCC2 /* AlbumCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		466E2C1426CA58EF00A0DCC2 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		466FAEF426D61D770030B6B5 /* LibararyPlaylistsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibararyPlaylistsResponse.swift; sourceTree = "<group>"; };
+		466FAEF626D6210A0030B6B5 /* ActionLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionLabelView.swift; sourceTree = "<group>"; };
 		D16E54F324666B1536BCE31F /* Pods-Spotify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify.debug.xcconfig"; path = "Target Support Files/Pods-Spotify/Pods-Spotify.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +242,7 @@
 				466E2C1426CA58EF00A0DCC2 /* CategoryCollectionViewCell.swift */,
 				4669516626CF7CA0001A6CE5 /* PlayerControlsView.swift */,
 				464617EA26D4C849008FD840 /* LibraryToggleView.swift */,
+				466FAEF626D6210A0030B6B5 /* ActionLabelView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 				4669CE4526CB85F90097D4E8 /* AllCategoriesResponse.swift */,
 				466C918A26CCDACD00A700D6 /* SearchResultsResponse.swift */,
 				466C918C26CCDF6900A700D6 /* SearchResult.swift */,
+				466FAEF426D61D770030B6B5 /* LibararyPlaylistsResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -467,6 +473,7 @@
 				464617E726D4B1B4008FD840 /* LibraryPlaylistViewController.swift in Sources */,
 				465430A626C3A507009470DB /* NewReleasesCellViewModel.swift in Sources */,
 				46243DFF26CE2DDA001CBDD5 /* SearchResultDefaultTableTableViewCell.swift in Sources */,
+				466FAEF726D6210A0030B6B5 /* ActionLabelView.swift in Sources */,
 				466E2C1326CA48EA00A0DCC2 /* AlbumCollectionViewCellViewModel.swift in Sources */,
 				46477DC426C4EE9200EFD0F6 /* RecommendedTrackCellViewModel.swift in Sources */,
 				4666B5B826B92D1200FDE0EE /* ProfileViewController.swift in Sources */,
@@ -497,6 +504,7 @@
 				4653717E26C28ADC0093BE38 /* FeaturedPlaylistCollectionViewCell.swift in Sources */,
 				46477DC226C4EDEF00EFD0F6 /* FeaturedPlaylistsCellViewModel.swift in Sources */,
 				4666B58F26B9296D00FDE0EE /* AppDelegate.swift in Sources */,
+				466FAEF526D61D770030B6B5 /* LibararyPlaylistsResponse.swift in Sources */,
 				46243E0126CE3031001CBDD5 /* SearchResultDefaultTableTableViewCellViewModel.swift in Sources */,
 				4666B5AD26B92B9700FDE0EE /* LibraryViewController.swift in Sources */,
 				4666B5BC26B92D3300FDE0EE /* PlaylistViewController.swift in Sources */,

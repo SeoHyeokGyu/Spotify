@@ -49,9 +49,7 @@ class SearchResultSubtitleTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         let imageSize: CGFloat = contentView.height - 10
-        iconimageView.frame = CGRect(x: 10, y: 0, width: imageSize, height: imageSize)
-        iconimageView.layer.cornerRadius =  imageSize/2
-        iconimageView.layer.masksToBounds = true
+        iconimageView.frame = CGRect(x: 10, y: 5, width: imageSize, height: imageSize)
         let labelHeight = contentView.height/2
         label.frame = CGRect(
             x: iconimageView.right + 10,
@@ -79,7 +77,7 @@ class SearchResultSubtitleTableViewCell: UITableViewCell {
     func configure(with viewModel: SearchResultSubtitleTableViewCellViewModel) {
         label.text = viewModel.title
         subTitlelabel.text = viewModel.subtitle
-        iconimageView.sd_setImage(with: viewModel.imageURL, completed: nil)
+        iconimageView.sd_setImage(with: viewModel.imageURL, placeholderImage: UIImage(systemName: "photo"), completed: nil)
     }
 
 }
