@@ -52,3 +52,7 @@ extension String {
         return DateFormatter.DisplaydateFormetter.string(from: date)
     }
 }
+
+extension Notification.Name {
+    static let albumSavedNotification = Notification.Name("albumSavedNotification")
+}
