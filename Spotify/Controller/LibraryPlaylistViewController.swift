@@ -38,7 +38,7 @@ class LibraryPlaylistViewController: UIViewController {
             navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(didTapClose))
         }
         fetchData()
-
+        
     }
     
     @objc func didTapClose(){
@@ -104,11 +104,14 @@ class LibraryPlaylistViewController: UIViewController {
                   !text.trimmingCharacters(in: .whitespaces).isEmpty else {
                 return
             }
-            APICaller.shared.createPlaylist(with: text){ success in
+            APICaller.shared.createPlaylist(with: text){ [weak self] success in
                 if success{
-                    
+                    HapticsManager.shared.vibrate(for: .success)
+                    self?.fetchData()
                 }else {
-                    
+                    HapticsManager.shared.vibrate(for: .error)
+
+                    print("Failed to create playlist")
                 }
             }
         }))
@@ -141,12 +144,13 @@ extension LibraryPlaylistViewController: UITableViewDelegate, UITableViewDataSou
             imageURL: URL(string: playlist.images.first?.url ?? ""
             )
         )
-    )
+        )
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        HapticsManager.shared.vibrateForSelection()
         
         let playlist = playlists[indexPath.row]
         

@@ -8,7 +8,7 @@
 import UIKit
 
 class AlbumViewController: UIViewController {
-        
+    
     private let collectionView = UICollectionView(
         frame: .zero,
         collectionViewLayout: UICollectionViewCompositionalLayout(sectionProvider: { _, _ -> NSCollectionLayoutSection? in
@@ -84,7 +84,7 @@ class AlbumViewController: UIViewController {
         fetchData()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(didTapActions))
         // Do any additional setup after loading the view.
-
+        
     }
     @objc func didTapActions(){
         let actionSheet = UIAlertController(title: album.name, message: "Action", preferredStyle: .actionSheet)
@@ -93,12 +93,15 @@ class AlbumViewController: UIViewController {
             guard let strongSelf = self else { return }
             APICaller.shared.saveAlbum(album: strongSelf.album) { success in
                 if success {
+                    HapticsManager.shared.vibrate(for: .success)
                     NotificationCenter.default.post(name: .albumSavedNotification, object: nil)
+                } else {
+                    HapticsManager.shared.vibrate(for: .error)
                 }
             }
             
         }))
-
+        
         present(actionSheet, animated: true, completion: nil)
     }
     
@@ -120,22 +123,6 @@ class AlbumViewController: UIViewController {
                 }
             }
         }
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        collectionView.frame = view.bounds
-    }
-}
-
-extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -166,6 +153,22 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
         header.delegate = self
         return header
         
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        collectionView.frame = view.bounds
+    }
+}
+
+extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
