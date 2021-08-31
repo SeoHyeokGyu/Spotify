@@ -12,6 +12,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
     
@@ -24,6 +25,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         title = "Settings"
         view.backgroundColor = .systemBackground
         view.addSubview(tableView)
+        
         tableView.dataSource = self
         tableView.delegate = self
         // Do any additional setup after loading the view.
@@ -98,15 +100,5 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         let model = sections[section]
         return model.title
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

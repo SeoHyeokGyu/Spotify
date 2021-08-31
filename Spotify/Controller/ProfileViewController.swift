@@ -23,13 +23,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .systemBackground
         title = "Profile"
+        
         view.addSubview(tableView)
+        
         tableView.dataSource = self
         tableView.delegate = self
         fetchProfile()
-        view.backgroundColor = .systemBackground
-        
+
         // Do any additional setup after loading the view.
     }
     
@@ -44,6 +46,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 case .success(let model):
                     self?.updateUI(with: model)
                 case .failure(let error):
+                    print(error.localizedDescription)
                     self?.failedToGetProfile()
 
                 }
@@ -98,21 +101,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.selectionStyle = .none
         return cell
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models.count
     }
     
 }
-
-
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destination.
- // Pass the selected object to the new view controller.
- }
- */
 
 
