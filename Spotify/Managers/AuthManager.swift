@@ -13,8 +13,8 @@ final class AuthManager{
     private var refreshingToken = false
     
     struct Constants {
-        static let clientID = "ccaed1b058fd4411be2cc907535a8369"
-        static let clientSecret = "8c610d8d68944c919ebf7a9d96ae5f31"
+        static let clientID = ""
+        static let clientSecret = ""
         static let tokenAPIURL = "https://accounts.spotify.com/api/token"
         static let redirectURI = "https://www.naver.com"
         static let scopes = "user-read-private%20playlist-modify-public%20playlist-read-private%20user-follow-read%20user-library-modify%20user-library-read%20user-read-email"
